@@ -2,7 +2,8 @@ public class Main {
     public static void main(String[] args) {
 //        list_unordered();
 //        binary_search_ordered();
-        binary_search_tree();
+//        binary_search_tree();
+        red_black_bst();
     }
 
     public static void list_unordered() {
@@ -32,6 +33,26 @@ public class Main {
 
     public static void binary_search_tree() {
         BST st = new BST();
+        st.put("A", 6);
+        st.put("B", 5);
+        st.put("E", 7);
+        st.put("C", 4);
+        st.put("D", 2);
+        st.put("G", 1);
+        st.put("F", 8);
+
+        System.out.println("BST get the value with key B: " + st.get("B") + ", with rank: " + st.rank("B"));
+        System.out.println("BST get its size: " + st.size() + ", with keys from A to D: " + st.keys("A", "D"));
+        System.out.println("BST has min: " + st.min() + ", max: " + st.max());
+
+        st.deleteMin();
+        System.out.println("BST after delete min, current min is: " + st.min());
+        st.deleteMax();
+        System.out.println("BST after delete max, current max is: " + st.max());
+    }
+
+    public static void red_black_bst() {
+        RedBlackBST st = new RedBlackBST();
         st.put("A", 6);
         st.put("B", 5);
         st.put("E", 7);
