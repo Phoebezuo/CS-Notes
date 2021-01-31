@@ -43,5 +43,7 @@ public class Merge extends Sort {
         System.arraycopy(nums, right, temp, index, rightEnd - right + 1);
 
         System.arraycopy(temp, leftStart, nums, leftStart, size);
+
+        // arraycopy(Object src, int srcPos, Object dest, int destPos, int length)
     }
 }
